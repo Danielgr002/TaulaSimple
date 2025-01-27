@@ -12,7 +12,7 @@ public class Provincia {
     private Long id;
     private String nom;
 
-    @OneToMany(mappedBy = "Ciutat")
+    @OneToMany(mappedBy = "provincia")
     private List<Ciutat> ciutats;
 
     @ManyToOne
@@ -26,6 +26,14 @@ public class Provincia {
 
     public Provincia() {
 
+    }
+
+    public Pais getPais() {
+        return pais;
+    }
+
+    public void setPais(Pais pais) {
+        this.pais = pais;
     }
 
     public Long getId() {

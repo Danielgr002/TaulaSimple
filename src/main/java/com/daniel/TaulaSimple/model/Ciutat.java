@@ -5,22 +5,30 @@ import jakarta.persistence.*;
 @Table (name = "CIUTAT")
 public class Ciutat {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
-    String nom;
+    private long id;
+    private String nom;
 
-
-
-    public Ciutat() {
-    }
-
-    public Ciutat(long id, String nom) {
-        this.id = id;
-        this.nom = nom;
-    }
 
     @ManyToOne
     @JoinColumn(name = "PROVINCIA_ID")
     private Provincia provincia;
+
+    public Ciutat() {
+    }
+
+    public Ciutat(long id, String nom, Provincia provincia) {
+        this.id = id;
+        this.nom = nom;
+        this.provincia = provincia;
+    }
+
+    public Provincia getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(Provincia provincia) {
+        this.provincia = provincia;
+    }
 
     public void setId(long id) {
         this.id = id;

@@ -20,7 +20,7 @@ public class Pais {
     public Pais() {
     }
 
-    @OneToMany(mappedBy = "Provincia")
+    @OneToMany(mappedBy = "pais")
     private List<Provincia> provincias;
 
     public Long getId() {
