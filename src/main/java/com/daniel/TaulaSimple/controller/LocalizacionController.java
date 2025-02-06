@@ -7,16 +7,15 @@ import com.daniel.TaulaSimple.model.Ciutat;
 import com.daniel.TaulaSimple.model.Pais;
 import com.daniel.TaulaSimple.model.Provincia;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/api/localitzacions")
-public class LocalizacionRestController {
+@Controller
+@RequestMapping("localitzacions")
+public class LocalizacionController {
     @Autowired
     private PaisObtenerTodos paisService;
 

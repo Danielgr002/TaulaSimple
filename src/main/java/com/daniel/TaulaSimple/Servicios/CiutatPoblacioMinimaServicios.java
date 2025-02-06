@@ -24,8 +24,6 @@ public class CiutatPoblacioMinimaServicios {
                 ciutatsfiltrades.add(ciutat);
             }
         }
-
         return ciutatsfiltrades;
-
     }
 }
