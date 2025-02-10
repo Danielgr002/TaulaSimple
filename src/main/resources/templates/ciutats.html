@@ -11,6 +11,7 @@
         <th>ID</th>
         <th>Nom</th>
         <th>Població</th>
+        <th>Franquicias</th>
     </tr>
     </thead>
     <tbody>
@@ -18,7 +19,13 @@
         <td th:text="${ciutat.id}"></td>
         <td th:text="${ciutat.nom}"></td>
         <td th:text="${ciutat.poblacion}"></td>
+        <td>
+        <ul>
+            <li th:each="fran : ${ciutat.franquicias}" th:text="${fran.nom}"></li>
+        </ul>
+        </td>
     </tr>
+
     </tbody>
 </table>
 </body>

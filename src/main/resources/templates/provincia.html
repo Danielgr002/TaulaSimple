@@ -10,12 +10,18 @@
   <tr>
     <th>ID</th>
     <th>Nom</th>
+    <th>Ciudades</th>
   </tr>
   </thead>
   <tbody>
   <tr th:each="provincia : ${provincias}">
     <td th:text="${provincia.id}"></td>
     <td th:text="${provincia.nom}"></td>
+    <td>
+    <ul>
+      <li th:each="ciudad : ${provincia.getCiutats()}" th:text="${ciudad.getNom()}"></li>
+    </ul>
+    </td>
   </tr>
   </tbody>
 </table>

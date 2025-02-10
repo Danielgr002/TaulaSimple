@@ -1,6 +1,7 @@
 package com.daniel.TaulaSimple.model;
 import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -20,12 +21,12 @@ public class Ciutat {
             name = "ciutat-franq",
             joinColumns = @JoinColumn(name = "ciutat-franq_ciutat_id_fk"),
             inverseJoinColumns = @JoinColumn(name = "ciutat-franq_franquicia_id_franquicia_fk"))
-    Set<Franquicia> franquicias;
+    List<Franquicia> franquicias;
 
     public Ciutat() {
     }
 
-    public Ciutat(long id, String nom, int poblacion, Provincia provincia, Set<Franquicia> franquicias) {
+    public Ciutat(long id, String nom, int poblacion, Provincia provincia, List<Franquicia> franquicias) {
         this.id = id;
         this.nom = nom;
         this.poblacion = poblacion;
@@ -33,11 +34,11 @@ public class Ciutat {
         this.franquicias = franquicias;
     }
 
-    public Set<Franquicia> getFranquicias() {
+    public List<Franquicia> getFranquicias() {
         return franquicias;
     }
 
-    public void setFranquicias(Set<Franquicia> franquicias) {
+    public void setFranquicias(List<Franquicia> franquicias) {
         this.franquicias = franquicias;
     }
 

@@ -10,12 +10,18 @@
     <tr>
         <th>ID</th>
         <th>Nom</th>
+        <th>Provincias</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="pais : ${paisos}">
         <td th:text="${pais.id}"></td>
         <td th:text="${pais.nom}"></td>
+        <td>
+        <ul>
+            <li th:each="pai : ${pais.getProvincias()}" th:text="${pai.nom}"></li>
+        </ul>
+        </td>
     </tr>
     </tbody>
 </table>

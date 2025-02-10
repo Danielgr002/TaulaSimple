@@ -12,9 +12,18 @@ public class Pais {
     private Long Id;
     private String nom;
 
-    public Pais(Long id, String nom) {
+    public Pais(Long id, String nom, List<Provincia> provincias) {
         Id = id;
         this.nom = nom;
+        this.provincias = provincias;
+    }
+
+    public List<Provincia> getProvincias() {
+        return provincias;
+    }
+
+    public void setProvincias(List<Provincia> provincias) {
+        this.provincias = provincias;
     }
 
     public Pais() {

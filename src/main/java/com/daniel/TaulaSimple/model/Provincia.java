@@ -19,9 +19,19 @@ public class Provincia {
     @JoinColumn(name = "PAIS_ID")
     private Pais pais;
 
-    public Provincia(String nom, Long id) {
-        this.nom = nom;
+    public Provincia(Long id, String nom, List<Ciutat> ciutats, Pais pais) {
         this.id = id;
+        this.nom = nom;
+        this.ciutats = ciutats;
+        this.pais = pais;
+    }
+
+    public List<Ciutat> getCiutats() {
+        return ciutats;
+    }
+
+    public void setCiutats(List<Ciutat> ciutats) {
+        this.ciutats = ciutats;
     }
 
     public Provincia() {

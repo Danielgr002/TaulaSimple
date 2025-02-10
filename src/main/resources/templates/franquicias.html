@@ -10,12 +10,18 @@
     <tr>
         <th>ID</th>
         <th>Nom</th>
+        <th>Ciudades</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="fran : ${franquicias}">
         <td th:text="${fran.id}"></td>
         <td th:text="${fran.nom}"></td>
+        <td>
+        <ul>
+            <li th:each="f : ${fran.ciutats}" th:text="${f.nom}"></li>
+        </ul>
+        </td>
     </tr>
     </tbody>
 </table>
