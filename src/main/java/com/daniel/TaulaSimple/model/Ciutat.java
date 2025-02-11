@@ -2,7 +2,6 @@ package com.daniel.TaulaSimple.model;
 import jakarta.persistence.*;
 
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table (name = "CIUTAT")
@@ -18,9 +17,9 @@ public class Ciutat {
 
     @ManyToMany
     @JoinTable(
-            name = "ciutat-franq",
-            joinColumns = @JoinColumn(name = "ciutat-franq_ciutat_id_fk"),
-            inverseJoinColumns = @JoinColumn(name = "ciutat-franq_franquicia_id_franquicia_fk"))
+            name = "CIUTAT_FRANQ",
+            joinColumns = @JoinColumn(name = "CIUDAD_ID"),
+            inverseJoinColumns = @JoinColumn(name = "FRANQUICIA_ID"))
     List<Franquicia> franquicias;
 
     public Ciutat() {

@@ -13,9 +13,9 @@ public class Franquicia {
 
     @ManyToMany
     @JoinTable(
-            name = "ciutat-franq",
-            joinColumns = @JoinColumn(name = "ciutat-franq_franquicia_id_franquicia_fk"),
-            inverseJoinColumns = @JoinColumn(name = "ciutat-franq_ciutat_id_fk"))
+            name = "CIUTAT_FRANQ",
+            joinColumns = @JoinColumn(name = "FRANQUICIA_ID"),
+            inverseJoinColumns = @JoinColumn(name = "CIUDAD_ID"))
     Set<Ciutat> ciutats;
 
     public Franquicia() {

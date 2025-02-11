@@ -19,7 +19,7 @@
         <td th:text="${fran.nom}"></td>
         <td>
         <ul>
-            <li th:each="f : ${fran.ciutats}" th:text="${f.nom}"></li>
+            <li th:each="f : ${fran.ciutats}" th:text="${f.getNom()}"></li>
         </ul>
         </td>
     </tr>
